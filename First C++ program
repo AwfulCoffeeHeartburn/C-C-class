@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+//First try with this IDE
+//Todays date
+
+int main()
+{
+ cout << "Stanley Zezotarski\n xxxx xxxxxxxxx xxxxx\n";
+ cout << "xxxxxxxxxx, CA xxxxx\n (910) xxx-xxxx";
+}
