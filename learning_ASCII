@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+/*Ths program was written by a jerk*/
+//You'll never guess what this spells!
+int main()
+{
+ char ss, ef, se, efo, blur, erk, gop, inghnk, shglkrtzf;
+
+ ss = 1;
+ ef = 2;
+ se = 3;
+ efo = 4;
+ blur = 112;
+ erk = 101;
+ gop = 110;
+ inghnk = 105;
+ shglkrtzf = 115;
+ 
+ cout << ss << ef << se << efo << '\n' << blur
+ << erk << gop << inghnk << shglkrtzf;
+ return 0;
+}
