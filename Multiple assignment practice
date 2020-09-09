@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+//Blah blah blah
+
+using namespace std;
+
+
+int main()
+{
+    string tot, sub, t, ship;
+    
+    double total, subtotal, tax, shipping;
+    total = subtotal = tax = shipping = 0;
+    
+    cout << "The numbers are:\n";
+    cout << total << endl << subtotal << endl;
+    cout << tax << endl << shipping << endl;
+    
+    return 0;
+    
+}
