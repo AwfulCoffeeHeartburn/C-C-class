@@ -1,0 +1,83 @@
+/* Stanley G. Zezotarski
+CISP 360 Fall
+Book: Gaddis 9th Edition
+Assignment 1a Part B
+9/11/2020 */
+
+// We're looking at slash versus percent operator.
+
+#define NUM_SECS_PER_HOUR 3600 
+#define NUM_SECS_PER_MINUTE 60
+/* Very interesting to learn that you are able to declare constants
+outside of the int function, and with #define. I do not believe this 
+is the way the book teaches it, but I like this better, it seems 
+way cooler and more orthoganol. Good new thing to know. */
+
+#include <iostream>
+#include <stdio.h>
+#include <ctime>
+
+using namespace std;
+
+
+int main(void)
+{
+
+    int input_secs;
+    int num_secs, hours2, minutes2;
+    
+    
+    printf(" These are the things you asked for in the lab.\n\n");
+    printf(" Enter a number of seconds por favor. \n\n");
+    scanf("%d", &input_secs);
+    
+    hours2 = input_secs / NUM_SECS_PER_HOUR;
+    minutes2 = input_secs % NUM_SECS_PER_HOUR / NUM_SECS_PER_MINUTE;
+    num_secs = input_secs % NUM_SECS_PER_HOUR % NUM_SECS_PER_MINUTE;
+    
+    printf(" %5d seconds = %2d hours, %2d minutes, and %2d seconds\n", 
+           input_secs, hours2, minutes2, num_secs, "\n\n\n\n");
+           
+    /* I need to make sure to remind myself and remember to include
+    variables corresponding to each item that follows a piece of
+    %numd syntax. */       
+    
+    /* It was really interesting and useful to learn about this
+    %numd type syntax. I was previously using cout for all of my output
+    (as the book instructs), but printf and scanf appeal to me more because
+    they are more reminiscent of python, and with this %numd trick
+    it is now easier and faster for me when I want to display data
+    in a particular way, so this was cool. */
+    
+    //Did the next part just for fun.
+    
+    printf("STUFF YOU DIDN'T ASK FOR!!!!11ONE1!11!!!\n\n");
+    
+    unsigned seed = time(0);
+    
+    long int hours, minutes, days, months, years;
+    
+    hours = (seed / 60) / 60;
+    minutes = seed / 60;
+    days = ((seed / 60) / 60) / 24;
+    months = days / 30;
+    years = months / 12;
+    
+    cout << "Seconds since Midnight, January 1st, 1970: " << seed << endl;
+    cout << "Minutes since Midnight, January 1st, 1970: " << minutes << endl;
+    cout << "Hours since Midnight, January 1st, 1970: " << hours << endl;
+    cout << "Days since Midnight, January 1st, 1970: " << days << endl;
+    cout << "Months since Midnight, January 1st, 1970: " << months << endl;
+    cout << "Years since Midnight, January 1st, 1970: " << years << 
+    "<---- lolwut?\n\n";
+    
+    
+    printf(" Press any key to escape from this black abyss so that it will stop"
+    " staring back into you. ");
+    
+    
+    fflush(stdin);
+    getchar();
+    return 0;
+}
+//Gonna upload this to github for future reference for sure. Super useful.
