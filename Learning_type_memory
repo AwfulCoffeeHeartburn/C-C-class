@@ -1,0 +1,65 @@
+/* Here is Part A of Lab 1a.
+Stanley G. Zezotarski
+CISP 360 Fall
+9/11/2020 */
+
+#include <stdio.h>
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+int main(void)
+{
+   string nameVar;
+   string name2Var;
+   nameVar = "aLargeAssortmentOfCharactersAndWordsInCamelCase";
+   name2Var = "The contents appear not to matter, the string variable can"
+   " evidently hold 4 bytes,\n that's 32 bits, so lets see how long I can make"
+   " this.\n It seems to say 4 bytes no longer how long I make the contents of the"
+   " variable. That's interesting.\n";
+   /* I don't know why the byte size is still 4 even when there is clearly
+   so much data put into the string variable. Maybe there was something
+   in the book and I missed it or forgot. Either way it bears looking into. */
+   
+   printf(" The size of an char %2d\n\n",sizeof(char)); //Char size
+  
+   printf(" The size of my first string var %2d\n\n", sizeof(nameVar));
+   cout << name2Var << "\n";
+   printf(" The size of my second string var %2d\n", sizeof(name2Var));
+   
+   // Int type sizes
+   printf(" The size of a int %2d\n",sizeof(int));   
+   printf(" The size of an short int %2d\n",sizeof(short int)); 
+   printf(" The size of an long int %2d\n\n",sizeof(long int));
+   
+   /* Was preciously unaware that you could have C++ report the size of a 
+   variable type without declaring a variable of that type. I guess it makes 
+   perfect sense, it's just not something that immediately occurred to me. So
+   it's good to know that C++ is smart enough to recognize it's own variable
+   types in a variety of ways. */
+   
+   //Unsigned data types can only store non-negative values.
+   printf(" Unsigned data types can only store non-negative values. The following"
+   " are unsigned data types of the int family: \n\n");
+   
+   //Unsigned ints.
+   printf(" The size of an unsigned int %2d\n",sizeof(unsigned int));
+   printf(" The size of an unsigned short int %2d\n",sizeof(unsigned short int));
+   printf(" The size of an unsigned long int %2d\n",sizeof(unsigned long int));
+   printf(" The size of a long long int %2d\n",sizeof(long long int));
+   printf(" The size of an unsigned long long int %2d\n",sizeof(unsigned long long int));
+   
+   // Float sizes
+   printf(" The size of a float %2d\n\n",sizeof(float));   
+   
+   // Double size
+   printf(" The size of an double %2d\n\n",sizeof(double)); 
+   printf(" The size of a long double %2d\n\n",sizeof(long double));
+   
+   
+   printf(" Press any key to continue. "); //Finish program
+   fflush(stdin); //Execution pause
+   getchar();
+   return 0;                           
+}
